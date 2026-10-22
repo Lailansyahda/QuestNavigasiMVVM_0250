@@ -22,6 +22,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.questnavigasimvvm.R
 import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.DividerDefaults.Thickness
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -76,7 +77,16 @@ fun FormIsian(
                 .padding(20.dp)
                 .width(250.dp)
                 thickness = 1.dp,
-                color = Color.Red)
+                color = Color.Red
+            )
+            OutlinedTextField(
+                value = "",
+                singleLine = true,
+                modifier = Modifier
+                    .width(250.dp),
+                label = {Text(text = "Alamat")},
+                onValueChange = {},
+            )
         }
     }
 }
