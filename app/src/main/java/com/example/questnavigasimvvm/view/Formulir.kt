@@ -22,6 +22,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.questnavigasimvvm.R
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Button
 import androidx.compose.material3.DividerDefaults.Thickness
 
 
@@ -87,6 +90,14 @@ fun FormIsian(
                 label = {Text(text = "Alamat")},
                 onValueChange = {},
             )
+            Spacer(modifier = Modifier.height(30.dp))
+            Button(
+                modifier = Modifier.fillMaxWidth(1f)
+                    .padding(all = 25.dp),
+                onClick = OnSubmitBtnClick
+            ) {
+                Text(stringResource(id = R.string.submit))
+            }
         }
     }
 }
